@@ -1,0 +1,106 @@
+body {
+  
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+}
+.container {
+    display: grid;
+    grid-template-columns: minmax(10rem, 18.5rem) 1fr;
+    max-width: 30rem;
+    max-height: 30rem;
+    background-color: white;
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.18);
+    box-sizing: border-box;
+}
+
+.description{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: end;
+    padding-right: 30px;
+}
+.prices{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ padding-left: 2em;
+}
+.originalPrice{
+    padding-left: 1em;
+    padding-top: 15px;
+    font-size: 0.75em;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+.discountPrice{
+    color:  hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+}
+.productImage img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-bottom-left-radius: 0.5em;
+   border-top-left-radius: 0.5em;
+}
+.buttonStyle{
+   margin-bottom: 30px;
+   margin-left: 2em;
+   width: 10rem;
+   height: 2.5rem;
+   background-color:  hsl(158, 36%, 37%);
+   border-radius: 0.5em;
+}
+.buttonStyle a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    padding-left: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.buttonStyle :hover{
+    cursor: pointer;
+}
+.textDescription{
+    padding-left: 2em;
+}
+.textDescription p{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; 
+}
+@media screen and (max-width: 700px) {
+    .container{
+       display: grid;
+       grid-template-columns: 1fr;
+       max-width: 20rem;
+       max-height: 570px;
+       background-color: white;
+       border-radius: 0.5em;
+    }
+}
+@media screen and (max-width: 700px) {
+  .productImage{
+    height: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+    .productImage img{
+        height: 15rem;
+        border-bottom-right-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+    }
+}
+@media screen and (max-width: 700px) {
+    .originalPrice{
+        padding-right: 100px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .buttonStyle{
+        width: auto;
+    }
+}
